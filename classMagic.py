@@ -1,10 +1,8 @@
 from classSQL import mySQLConnection
 from classSMS import mySMSConnection
-from classChromeCast import myChromeCast
-from classFitBit import myFitBit
+#from classChromeCast import myChromeCast
+#from classFitBit import myFitBit
 from classPomodoro import SmallPomo, MediumPomo, PomoManager
-
-#This class handles the interaction between SMS and the database
 
 class myMagic:
     

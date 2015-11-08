@@ -4,9 +4,11 @@ Console based task tracker that interfaces with fitbit, textmagic, and chromecas
 
 To Use:
 
-Fill in your keys/IDs in whichever python file you would like to use, then run 'classXXX.py'. 'Her.py' includes most functionality but does not currenlty include the audio files.
+Fill in your keys/IDs in whichever python file you would like to use, then run 'classXXX.py'. 
+'Her.py' includes most current functionality. Intended to be used interactively:
+
+    ipython -i Her.py
 
 WARNING: 
-Sound files are hardcoded via local path.
 All API keys and IDs are removed in the public repo. Please insert your own to use.
 All locations where keys/IDs were removed are marked with the string "FILL"

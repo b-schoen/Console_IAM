@@ -5,11 +5,12 @@ from gtts import gTTS
 #from threading import Timer
 
 from classSQL import mySQLConnection
-from classSMS import mySMSConnection
-from classChromeCast import myChromeCast
-from classFitBit import myFitBit
+#from classSMS import mySMSConnection
+#from classChromeCast import myChromeCast
+#from classFitBit import myFitBit
 from classPomodoro import SmallPomo, MediumPomo, PomoManager
 from classMagic import myMagic
+from classTasker import Tasker
 
 class Her:
 
@@ -19,11 +20,9 @@ class Her:
         
         self.defineAudioFiles()
     
-        self.Hello()
-    
     def defineAudioFiles(self):
         
-        self.directory_path = "/Users/bschoen/Desktop/WebTest/Sound/"
+        self.directory_path = "Sound/"
     
         self.os_start_file_audio = self.directory_path+"os_start.wav"
     
@@ -126,6 +125,9 @@ class Her:
         
                 #self.playAudioFile(self.youll_get_used_to_it)
 
+        else:
+                self.playAudioFile(self.how_can_i_help_you)
+
 
     def playAudioFile(self, file_name):
     
@@ -137,11 +139,23 @@ if __name__ == "__main__":
     
     her = Her()
     
-    o = myMagic("myTasks","myFutureTasks")
+    her.Hello()
+    her.checkup()
+    
+    #uncomment these to play with pomodoro timers
+    #mp = MediumPomo(15,10)
+    #pm = PomoManager(15,10,"small")
 
+    #uncomment the following line if valid API keys/IDs are in place
+    #o = myMagic("myTasks","myFutureTasks")
+
+    #interface with SQL connection
     m = mySQLConnection("myTasks")
 
-    her.checkup()
+    #interface with tasker
+    t = Tasker("myTasks")
+
+
 
 
 

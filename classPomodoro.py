@@ -141,8 +141,6 @@ class PomoManager:
         
         subprocess.Popen(['mplayer',file_name]).wait()
 
-    print "That's really interesting"
-
 if __name__ == "__main__":
     
     print("Started main")
